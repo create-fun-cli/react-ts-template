@@ -1,4 +1,5 @@
 import { notification } from 'antd'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { AxiosError } from 'axios'
 import axios from 'axios'
 

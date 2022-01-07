@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { RouteItem } from '@/routes/types'
 import { MailOutlined, SafetyCertificateOutlined } from '@ant-design/icons'
 import { MailList, PermissionList } from 'views'

@@ -1,6 +1,7 @@
 import { mailApi } from '@/apis'
 import { MailListItem } from '@/apis/mail'
 import { Card, Table } from 'antd'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { ColumnsType } from 'antd/lib/table'
 import { useEffect, useState } from 'react'
 

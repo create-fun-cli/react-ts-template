@@ -1,4 +1,5 @@
-import { NormalRouteItem } from 'src/routes/types'
+import { NormalRouteItem } from '@/routes/types'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { FlattenedNavItem, RouteItem } from 'src/routes/types'
 
 // 递归生成扁平化的数据

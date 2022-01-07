@@ -15,8 +15,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "typeRoots": ["node_modules/@types", "vite/client", "src/typings"],
     "baseUrl": ".",
-    "typeRoots": ["node_modules/@types", "vite/client"],
     "paths": {
       "@/*": ["src/*"],
       "components/*": ["src/components/*"],
@@ -25,6 +25,6 @@
       "views": ["src/views/index.ts", "src/views/index.tsx"]
     }
   },
-  "include": ["src"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"],
   "exclude": ["node_modules"]
 }

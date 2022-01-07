@@ -1,4 +1,4 @@
-import { ReactNode, ReactElement } from 'react'
+import { ReactElement, ReactNode } from 'react'
 
 interface BaseRouteItem {
   /** key 必须唯一。 */
@@ -20,7 +20,7 @@ export interface SubrouteItem extends BaseRouteItem {
   component?: never
 }
 
-export type RouteItem = NormalRouteItem | SubrouteItem
+type RouteItem = NormalRouteItem | SubrouteItem
 
 export interface FlattenedNavItem extends NormalRouteItem {
   /**
@@ -28,3 +28,5 @@ export interface FlattenedNavItem extends NormalRouteItem {
    * */
   ancestorKeys: string[]
 }
+
+export type { RouteItem }

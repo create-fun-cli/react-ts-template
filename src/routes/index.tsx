@@ -4,6 +4,7 @@ import { isEmpty } from 'lodash-es'
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useLocation, useRoutes } from 'react-router-dom'
 import { routes } from '../route.config'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { RouteItem } from './types'
 import { flattenRoutes } from './utils'
 

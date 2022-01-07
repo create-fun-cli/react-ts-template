@@ -1,4 +1,4 @@
-declare module 'List' {
+declare module List {
   export type ListParams<T> = T & {
     page?: number
     page_size?: number

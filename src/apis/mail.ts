@@ -1,5 +1,5 @@
 import { request } from '@/utils/request'
-import { ListResponse } from 'List'
+import ListResponse = List.ListResponse
 
 export type MailListItem = {
   id: string
@@ -8,5 +8,5 @@ export type MailListItem = {
 }
 
 export function getList() {
-  return request.get<ListResponse<MailListItem>>('/mail/list')
+  return request.get<unknown, ListResponse<MailListItem>>('/mail/list')
 }
