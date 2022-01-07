@@ -1,0 +1,37 @@
+.trigger {
+  margin: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #1890ff;
+  }
+}
+
+.sider {
+  &-header {
+    height: 32px;
+    display: flex;
+    alignitems: center;
+    margin: 16px;
+  }
+
+  &-title {
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+  }
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.content {
+  margin: 24px;
+}
