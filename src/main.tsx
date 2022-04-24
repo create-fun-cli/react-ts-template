@@ -1,17 +1,12 @@
 import { ConfigProvider } from 'antd'
-import zhCN from 'antd/es/locale/zh_CN'
+import locale from 'antd/lib/locale/zh_CN'
+import moment from 'moment'
+import 'moment/dist/locale/zh-cn'
 import { render } from 'react-dom'
 import App from './App'
-import './index.css'
+import './styles/index.scss'
 
-function renderApp() {
-  render(
-    <ConfigProvider locale={zhCN}>
-      <App />
-    </ConfigProvider>,
-    document.getElementById('root'),
-  )
-}
+moment.locale('zh-cn')
 
 async function main() {
   if (import.meta.env.VITE_ENABLE_MOCK === 'true') {
@@ -19,7 +14,12 @@ async function main() {
     await worker.start({ onUnhandledRequest: 'bypass' })
   }
 
-  renderApp()
+  render(
+    <ConfigProvider locale={locale}>
+      <App />
+    </ConfigProvider>,
+    document.getElementById('root'),
+  )
 }
 
-main().then()
+main()

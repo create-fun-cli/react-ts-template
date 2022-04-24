@@ -35,7 +35,6 @@ export default defineConfig(({ mode }) => {
           {
             libraryName: 'antd',
             esModule: true,
-            // eslint-disable-next-line @typescript-eslint/no-shadow
             resolveStyle: name => `antd/es/${name}/style/index`,
           },
         ],
@@ -66,6 +65,13 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       open: true,
+      proxy: {
+        '^/api': {
+          target: '',
+          changeOrigin: true,
+          secure: false,
+        },
+      },
     },
   }
 })

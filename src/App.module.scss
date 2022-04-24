@@ -1,5 +1,12 @@
-.trigger {
-  margin: 0 24px;
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px !important;
+}
+
+.Trigger {
+  margin-right: 12px;
   font-size: 18px;
   line-height: 64px;
   cursor: pointer;
@@ -10,28 +17,28 @@
   }
 }
 
-.sider {
-  &-header {
+.Sider {
+  &Header {
     height: 32px;
     display: flex;
-    alignitems: center;
+    align-items: center;
     margin: 16px;
   }
 
-  &-title {
+  &Title {
     color: #fff;
     font-weight: 800;
     font-size: 18px;
   }
 }
 
-.logo {
+.Logo {
   width: 32px;
   height: 32px;
   margin-left: 8px;
   margin-right: 8px;
 }
 
-.content {
-  margin: 24px;
+.Content {
+  padding: 24px;
 }

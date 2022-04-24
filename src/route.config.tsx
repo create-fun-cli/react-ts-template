@@ -1,21 +1,42 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import type { RouteItem } from '@/routes/types'
 import { MailOutlined, SafetyCertificateOutlined } from '@ant-design/icons'
-import { MailList, PermissionList } from 'views'
+import { RouteConfig } from 'antd-menu-router'
+import { Mail, MailDetai, PermissionGroups, PermissionUsers } from 'views'
 
-export const routes: RouteItem[] = [
+const config: RouteConfig[] = [
   {
-    key: 'avatar',
+    key: 'mail',
     title: '邮件',
-    path: '/avatar',
+    path: '/mail',
     icon: <MailOutlined />,
-    element: <MailList />,
+    element: <Mail />,
+  },
+  {
+    key: 'mail-detail',
+    title: '邮件',
+    path: '/mail/:id/:type/:mail_id',
+    icon: <MailOutlined />,
+    element: <MailDetai />,
+    hidden: true,
   },
   {
     key: 'permission',
     title: '权限',
-    path: '/permission',
     icon: <SafetyCertificateOutlined />,
-    element: <PermissionList />,
+    children: [
+      {
+        key: 'users',
+        title: '用户',
+        path: '/permission/users',
+        element: <PermissionUsers />,
+      },
+      {
+        key: 'groups',
+        title: '组',
+        path: '/permission/groups',
+        element: <PermissionGroups />,
+      },
+    ],
   },
 ]
+
+export default config
