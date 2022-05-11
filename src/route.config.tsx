@@ -1,42 +1,15 @@
-import { MailOutlined, SafetyCertificateOutlined } from '@ant-design/icons'
-import { RouteConfig } from 'antd-menu-router'
-import { Mail, MailDetai, PermissionGroups, PermissionUsers } from 'views'
+import { Navigate, RouteObject } from 'react-router-dom'
+import { Dashboard } from './views/Dashboard'
 
-const config: RouteConfig[] = [
+const routes: RouteObject[] = [
   {
-    key: 'mail',
-    title: '邮件',
-    path: '/mail',
-    icon: <MailOutlined />,
-    element: <Mail />,
+    path: '/',
+    element: <Navigate replace to={{ pathname: '/dashboard' }} />,
   },
   {
-    key: 'mail-detail',
-    title: '邮件',
-    path: '/mail/:id/:type/:mail_id',
-    icon: <MailOutlined />,
-    element: <MailDetai />,
-    hidden: true,
-  },
-  {
-    key: 'permission',
-    title: '权限',
-    icon: <SafetyCertificateOutlined />,
-    children: [
-      {
-        key: 'users',
-        title: '用户',
-        path: '/permission/users',
-        element: <PermissionUsers />,
-      },
-      {
-        key: 'groups',
-        title: '组',
-        path: '/permission/groups',
-        element: <PermissionGroups />,
-      },
-    ],
+    path: 'dashboard',
+    element: <Dashboard />,
   },
 ]
 
-export default config
+export default routes

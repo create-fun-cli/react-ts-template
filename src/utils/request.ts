@@ -2,7 +2,6 @@
 import type { AxiosError } from '@chaos1ee/axios'
 import axios from '@chaos1ee/axios'
 import { notification } from 'antd'
-import { redirectToLoginPage } from 'components/AuthState/AuthState'
 
 // 在开发环境下给所有请求添加"/api"前缀，以便代理捕捉请求并转发到服务器。
 const instance = axios.create({ baseURL: import.meta.env.DEV ? '/api' : '/' })
@@ -21,7 +20,6 @@ instance.interceptors.response.use(
     if (error.response) {
       // 请求成功发出且服务器也响应了状态码，但状态码超出了 2xx 的范围
       if (error.response.data.code === 400) {
-        redirectToLoginPage()
         return
       }
 

@@ -2,5 +2,5 @@
 
 interface ImportMetaEnv {
   VITE_SITE_TITLE: string
-  VITE_ENABLE_MOCK: 'true' | 'false'
+  VITE_ENABLE_MOCK: 0 | 1
 }
