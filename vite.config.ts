@@ -46,7 +46,8 @@ export default defineConfig(({ mode }) => {
       }),
     ],
     build: {
-      minify: 'terser',
+      minify: 'esbuild',
+      target: 'esnext',
       sourcemap: true,
       rollupOptions: {
         output: {
@@ -56,22 +57,9 @@ export default defineConfig(({ mode }) => {
           },
         },
       },
-      terserOptions: {
-        compress: {
-          drop_console: true,
-          drop_debugger: true,
-        },
-      },
     },
     server: {
       open: true,
-      proxy: {
-        '^/api': {
-          target: '',
-          changeOrigin: true,
-          secure: false,
-        },
-      },
     },
   }
 })

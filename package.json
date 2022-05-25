@@ -12,7 +12,7 @@
     "@ant-design/icons": "^4.7.0",
     "@chaos1ee/axios": "^1.0.4",
     "@vitejs/plugin-react": "^1.1.3",
-    "antd": "^4.17.3",
+    "antd": "^4.20.1",
     "antd-menu-router": "^1.2.2",
     "less": "^4.1.2",
     "lodash-es": "^4.17.21",
