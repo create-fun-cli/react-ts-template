@@ -1,13 +1,13 @@
 import menuItems from '@/menu.config'
-import routes from '@/route.config'
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import { BackTop, Button, Layout } from 'antd'
-import { Menu, Routes } from 'antd-menu-router'
+import Menu from 'antd-menu'
 import { useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import styles from './App.module.scss'
 import './App.scss'
 import logo from './assets/logo.svg'
+import Routes from './Routes'
 
 const { Header, Content, Sider } = Layout
 
@@ -38,7 +38,7 @@ const App = () => {
           </Button>
         </Header>
         <Content className={styles.Content}>
-          <Routes routes={routes} />
+          <Routes />
           <BackTop></BackTop>
         </Content>
       </Layout>

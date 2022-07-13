@@ -1,5 +1,5 @@
 import { HomeOutlined } from '@ant-design/icons'
-import { MenuItem } from 'antd-menu-router'
+import { MenuItem } from 'antd-menu'
 
 const menuItems: MenuItem[] = [
   {
